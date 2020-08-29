@@ -39,6 +39,11 @@ public class Disappear : MonoBehaviour
     
     IEnumerator Hide()
     {
+        while(randerer.color.a > A_min)
+        {
+            randerer.color  -= new Color( 0,0, 0, Speed);
+            yield return new WaitForSeconds(0.03f);
+        }
         yield break;
     }
 }
